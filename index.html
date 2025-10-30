@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Invitación - 15 Años</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Portada / Hero -->
+  <header class="hero">
+    <!-- FIX: quitar backslash y escapar espacio -->
+    <div class="hero-bg" style="background-image:url('./assets/foto%20portada.jpeg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="small-title">MIS 15</div>
+      <h1 class="name">Victoria</h1>
+      <div class="date">29 . 11 . 25</div>
+    </div>
+  </header>
+
+  <!-- Countdown -->
+  <section class="count-strip">
+    <div class="count-grid">
+      <div class="count-item">
+        <div class="count-number" id="days">--</div>
+        <div class="count-label">Días</div>
+      </div>
+      <div class="count-item">
+        <div class="count-number" id="hours">--</div>
+        <div class="count-label">Horas</div>
+      </div>
+      <div class="count-item">
+        <div class="count-number" id="minutes">--</div>
+        <div class="count-label">Minutos</div>
+      </div>
+      <div class="count-item">
+        <div class="count-number" id="seconds">--</div>
+        <div class="count-label">Segundos</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ver mapa -->
+  <section class="info wrap" id="mapa">
+        <img src="./assets/carruse1l.png" alt="" class="img-seccion">
+    <h2 class="section-title">Cena y Fiesta</h2>
+    <p class="section-desc">La fiesta será el sabado 29 de noviembre, desde las 21:00 hs hasta las 4:30hs, en “Finca Tino”.</p>
+    <div class="btn-row">
+      <a class="btn outline" href="https://maps.app.goo.gl/4rq6AKCQJg3um8J39" id="btn-maps" target="_blank" rel="noopener">Ver mapa</a>
+    </div>
+  </section>
+
+  <!-- Confirmar asistencia -->
+  <section class="panel">
+    <h2 class="section-title">Confirmar asistencia</h2>
+    <p class="section-desc">Confirmar antes del 15 de noviembre.</p>
+    <div class="btn-row">
+      <a class="btn primary" href="#" id="btn-rsvp" target="_blank" rel="noopener">Confirmar</a>
+    </div>
+  </section>
+
+  <!-- ===== MI ÁLBUM ===== -->
+  <section id="album" class="album-section" aria-label="Mi álbum">
+    <h2 class="album-title">Mi álbum</h2>
+    <div class="album-carousel" aria-label="Carrusel de fotos">
+      <button class="nav prev" aria-label="Anterior" type="button">◂</button>
+      <div class="slides" id="album-slides">
+        <!-- FIX: escapar espacios con %20 -->
+        <img src="./assets/foto%201.jpeg" alt="Foto 1 del álbum">
+        <img src="./assets/foto%202.jpeg" alt="Foto 2 del álbum">
+        <img src="./assets/foto%203.jpeg" alt="Foto 3 del álbum">
+        <img src="./assets/foto%204.jpeg" alt="Foto 4 del álbum">
+        <img src="./assets/foto%205.jpeg" alt="Foto 5 del álbum">
+        <img src="./assets/foto%206.jpeg" alt="Foto 6 del álbum">
+        <img src="./assets/foto%207.jpeg" alt="Foto 7 del álbum">
+        <img src="./assets/foto%208.jpeg" alt="Foto 8 del álbum">
+        <img src="./assets/foto%209.jpeg" alt="Foto 9 del álbum">
+      </div>
+      <button class="nav next" aria-label="Siguiente" type="button">▸</button>
+      <div class="dots" id="album-dots" role="tablist" aria-label="Indicadores"></div>
+    </div>
+  </section>
+
+  <!-- Música -->
+  <section class="panel">
+    <h2 class="section-title">¿Canciones que no pueden faltar?</h2>
+    <p class="section-desc">Podés sugerir artistas o canciones para la playlist.</p>
+    <div class="btn-row">
+      <a class="btn primary" id="btn-musica" href="#" target="_blank" rel="noopener">Sugerir música</a>
+    </div>
+  </section>
+
+  <!-- Regalo -->
+  <section class="info wrap">
+    <img src="./assets/regalo1.png" alt="" class="img-seccion">
+    <h2 class="section-title">Regalo</h2>
+    <p class="section-desc">Tu presencia es lo más importante. Si deseás hacerme un obsequio, podés ver los datos a continuación.</p>
+    <div class="btn-row">
+      <button class="btn outline" id="btn-gift">Ver datos</button>
+    </div>
+  </section>
+
+  <!-- Dress code -->
+  <section class="info wrap">
+    <img src="./assets/dress1.png" alt="" class="img-seccion">
+    <h2 class="section-title">Dress Code</h2>
+    <p class="section-desc">Invitados: Negro elegante (Formal) <br>
+                  Solo la cumpleañera brilla en colores claros</p>
+    <div class="btn-row">
+      <a class="btn outline" href="https://www.pinterest.com/search/pins/?q=dress%20code%20formal" target="_blank" rel="noopener">Ejemplos</a>
+    </div>
+  </section>
+
+  <!-- Hashtag -->
+  <section class="hashtag">
+    <div class="hashtag-inner">
+      <h2 class="section-title">#Cumple15Vicky</h2>
+      <p class="section-desc">Compartí los videos y fotos que saques conmigo</p>
+      <div class="btn-row">
+        <a class="btn primary" href="www.instagram.com" target="_blank" rel="noopener">Ver en Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Los espero -->
+  <section class="info wrap">
+    <h2 class="section-title">¡Los espero!</h2>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Realizado por <a href="https://www.instagram.com/sanjuancloud/" target="_blank" rel="noopener">San Juan Cloud</a>
+  </footer>
+
+  <!-- Modal Regalo -->
+  <div class="modal" id="gift-modal" aria-hidden="true" role="dialog" aria-labelledby="gift-title">
+    <div class="modal-card">
+      <h3 id="gift-title">Datos bancarios</h3>
+      <div class="modal-body">
+        <p><strong>Mercado Pago</strong></p>
+        <p>Alias: victoriacumple.mp</p>
+        <p>Titular: Victoria</p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn outline" id="copy-alias">Copiar alias</button>
+        <button class="btn primary" id="close-gift">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+      <div id="toast" class="toast" hidden>Alias copiado</div>
+  <script src="script.js"></script>
+</body>
+</html>

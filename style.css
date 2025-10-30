@@ -1,0 +1,153 @@
+/* Paleta nude */
+:root{
+  --nude-1:#3A2D28;
+  --nude-2:#A48374;
+  --nude-3:#CBAD8D;
+  --nude-4:#D1C7BD;
+  --nude-5:#EBE3DB;
+  --nude-6:#F1EDE6;
+
+  --fondo: var(--nude-6);
+  --texto: #3F3A37;
+  --acento: var(--nude-3);
+  --borde: var(--nude-4);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  -webkit-font-smoothing: antialiased;
+}
+
+a{text-decoration:none;color:inherit}
+
+/* Hero */
+.hero{
+  position:relative;
+  min-height:72vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;overflow:hidden;
+}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient( rgba(0,0,0,.35), rgba(0,0,0,.35) )}
+.hero-content{position:relative;z-index:2}
+.small-title{letter-spacing:3px;font-size:14px;color:#fff;margin-bottom:10px}
+.name{font-family:"Great Vibes", cursive;color:var(--acento);font-size:96px;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.date{margin-top:8px;color:#fff;letter-spacing:2px}
+
+/* Countdown */
+.count-strip{background:var(--nude-5);border-top:1px solid #eee;border-bottom:1px solid #eee;padding:28px 12px}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:1100px;margin:0 auto;text-align:center}
+.count-number{font-size:44px;color:var(--acento);font-weight:700}
+.count-label{opacity:.8}
+
+/* Secciones */
+.wrap{max-width:1100px;margin:0 auto;padding:50px 20px}
+.info{text-align:center;background:transparent}
+.panel{background:var(--nude-5);padding:56px 20px;text-align:center;border-top:1px solid #eee;border-bottom:1px solid #eee}
+
+.section-title{
+  font-weight:500;font-size:32px;color:var(--texto);margin-bottom:10px;
+}
+.section-desc{max-width:780px;margin:0 auto;color:var(--texto);opacity:.85}
+
+/* Botones */
+.btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn{
+  padding:12px 22px;border-radius:8px;border:2px solid var(--acento);
+  letter-spacing:2px;font-weight:600;text-transform:uppercase;font-size:13px;cursor:pointer;
+  transition:all .2s ease;background:transparent;color:var(--texto)
+}
+.btn.primary{background:var(--acento);color:#fff;border-color:var(--acento)}
+.btn.outline:hover,.btn.primary:hover{transform:translateY(-3px);box-shadow:0 8px 16px rgba(0,0,0,.06)}
+
+/* Carrusel (estructura genérica opcional) */
+.carousel{position:relative;margin:16px auto 0;max-width:1100px}
+.carousel .viewport{
+  position:relative;overflow:hidden;border-radius:14px;background:var(--nude-5);
+  border:1px solid var(--borde);aspect-ratio:16/10;
+}
+.slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .35s ease}
+.slide.active{opacity:1}
+.slide img{max-width:100%;max-height:100%;object-fit:contain;display:block; }
+
+/* Controles */
+.nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:#fff;border:1px solid var(--borde);width:40px;height:40px;border-radius:50%;
+  display:grid;place-items:center;font-size:28px;color:var(--texto);cursor:pointer;
+  box-shadow:0 6px 14px rgba(0,0,0,.08)
+}
+.nav.prev{left:-12px}
+.nav.next{right:-12px}
+.nav:disabled{opacity:.4;pointer-events:none}
+
+.dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+.dots button{width:9px;height:9px;border-radius:50%;border:1px solid var(--borde);background:#fff;opacity:.7;cursor:pointer}
+.dots button.active{background:var(--acento);border-color:var(--acento);opacity:1}
+
+/* Hashtag - FIX: apuntar a /assets y escapar espacios */
+.hashtag{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.02)),
+    url('./assets/foto%20portada.jpeg')
+    center/cover no-repeat;
+}
+.hashtag .hashtag-inner{backdrop-filter: blur(1px); background:rgba(241,237,230,.85); text-align:center;padding:56px 20px}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.55);padding:20px;z-index:20}
+.modal.show{display:flex}
+.modal-card{background:#fff;max-width:720px;width:100%;border:2px solid var(--acento);border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,.15);overflow:hidden}
+.modal-card h3{padding:16px 18px;border-bottom:1px solid #eee}
+.modal-body{padding:18px}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;padding:12px 18px;border-top:1px solid #eee}
+
+/* Footer */
+.footer{padding:28px 16px;text-align:center;border-top:1px solid #eee;color:var(--texto)}
+.footer a{color:var(--texto);text-decoration:underline}
+
+/* Responsive */
+@media (max-width:900px){
+  .name{font-size:64px}
+  .nav.prev{left:6px}.nav.next{right:6px}
+}
+@media (max-width:560px){
+  .name{font-size:48px}
+  .carousel .viewport{aspect-ratio: 4/3}
+}
+
+/* ====== Álbum (carrusel) ====== */
+.album-section{background: var(--nude-100, #F1EDE6); padding: 56px 16px 64px;}
+.album-title{font-weight:400; text-align:center; color:#3A2D28; margin:0 0 20px; letter-spacing:.2px;}
+.album-carousel{position:relative; max-width: 1024px; margin: 0 auto;}
+.album-carousel .slides{position:relative; overflow:hidden; border-radius:18px; background:transparent; height:65vh;}
+.album-carousel .slides img{position:absolute; inset:0; margin:auto; width:100%; height:100%; object-fit:contain; object-position:center; opacity:0; transition: opacity .45s ease; background:transparent;}
+.album-carousel .slides img.active{opacity:1;}
+.album-carousel .nav{position:absolute; z-index:10; top:50%; transform:translateY(-50%); background:none; border:none; color:#A48374; font-size:38px; line-height:1; padding:6px 10px; cursor:pointer; transition: opacity .2s ease, transform .15s ease; user-select:none;}
+.album-carousel .nav.prev{left:12px;} .album-carousel .nav.next{right:12px;}
+.album-carousel .nav:hover{opacity:.75;} .album-carousel .nav:active{transform:translateY(-50%) scale(.96);}
+.album-carousel .nav:focus-visible{outline:2px dashed #CBAD8D; outline-offset:2px;}
+.album-carousel .dots{display:flex; gap:8px; justify-content:center; margin-top:14px;}
+.album-carousel .dots button{width:8px; height:8px; border-radius:999px; border:none; background:#cbb7ac; opacity:.7; cursor:pointer; transition: transform .15s ease, opacity .2s;}
+.album-carousel .dots button.active{width:22px; background:#A48374; opacity:1;}
+@media (max-width: 480px){
+  .album-carousel .nav{display:none;}
+  .album-carousel .slides{height:45vh;}
+}
+
+h2 {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 400;
+}
+.img-seccion {
+  width: 50px;
+}
+
+.modal[hidden], .modal-backdrop[hidden], .toast[hidden]{ display: none !important; }
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#333;color:#fff;padding:10px 16px;border-radius:999px;font-size:.9rem;z-index:120;box-shadow:0 8px 22px rgba(0,0,0,.25)}
