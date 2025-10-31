@@ -29,7 +29,7 @@ document.getElementById('close-gift')?.addEventListener('click',()=> modal.class
 modal?.addEventListener('click', (e)=> { if(e.target===modal) modal.classList.remove('show'); });
 document.getElementById('copy-alias')?.addEventListener('click', async ()=>{
   try{
-    await navigator.clipboard.writeText('sofiacumple.mp');
+    await navigator.clipboard.writeText('vicky.cas.mp');
     toast.hidden=false;setTimeout(()=>toast.hidden=true,1600);
   }catch(e){ alert('No se pudo copiar'); }
 });
